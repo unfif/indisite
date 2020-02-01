@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="{{encode}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>IndiSite</title>
+</head>
+<style>
+	#contents{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	hr{
+		width: 100%;
+	}
+	form input{
+		width: 800px;
+	}
+</style>
+<body>
+	<div id="contents">
+		<header>
+			<h1>IndiSite</h1>
+		</header>
+		<form action="/" class="formurl" method="post">
+			<label for="url">url</label>
+			<input type="text" name="url" placeholder="http://testpage.com" value="https://netkeiba.com">
+			<select name="encode">
+				<option value="UTF-8">UTF-8</option>
+				<option value="EUC-JP" selected>EUC-JP</option>
+				<option value="SJIS">SJIS</option>
+			</select>
+			<button type="submit">Go !</button>
+		</form>
+		<hr>
+		<div class="disparea">
+			{{html | safe}}
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.env
+
+__pycache__/
+
+*.bak
+*.log
+*.tmp
+*.un~
+*~
+debug*
